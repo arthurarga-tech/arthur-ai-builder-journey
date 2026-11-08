@@ -1,0 +1,29 @@
+name: Verificações
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Obter código
+        uses: actions/checkout@v4
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Instalar dependências do lockfile
+        run: npm ci
+      - name: Executar testes
+        run: npm test
+      - name: Verificar tipos
+        run: npm run typecheck
+      - name: Compilar aplicação
+        run: npm run build
