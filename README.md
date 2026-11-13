@@ -2,7 +2,9 @@
 
 Um portfólio e um espaço de prática para conectar engenharia, negócios e desenvolvimento de software. O projeto apresenta a trajetória de Arthur Guedes, seus produtos e uma primeira trilha de aprendizado aplicada a pedidos de delivery.
 
-**Primeira entrega implementada, com 24 testes unitários, tipagem e build aprovados em 08/11/2026.** A integração entre contas e a publicação privada estão em andamento. O tutor de IA está desativado e o uso da API permanece sem autorização de consumo. Projeto pessoal e independente, sem vínculo oficial com o iFood.
+**Primeira entrega implementada, com 24 testes unitários, tipagem e build aprovados em 08/11/2026.** A integração entre contas foi validada e a prévia privada foi publicada no Sites. O tutor de IA está desativado e o uso da API permanece sem autorização de consumo. Projeto pessoal e independente, sem vínculo oficial com o iFood.
+
+[Código-fonte no GitHub](https://github.com/arthurarga-tech/arthur-ai-builder-journey) · [Prévia no Sites — acesso privado](https://arthur-ai-builder-journey.awarehaven21.chatgpt.site)
 
 ## O que esta entrega reúne
 
@@ -46,6 +48,8 @@ Interface, conteúdo, API e regras vivem no mesmo projeto. O conteúdo público 
 Use **Node.js 24 recomendado** e npm. O starter exige Node 22.13 ou superior; para executar os testes TypeScript diretamente com Node, use no mínimo 22.18.
 
 ```sh
+git clone https://github.com/arthurarga-tech/arthur-ai-builder-journey.git
+cd arthur-ai-builder-journey
 npm ci
 npm run build
 ```
@@ -90,7 +94,7 @@ Os testes devem cobrir cálculo em centavos, entradas inválidas, critérios de 
 | HTTP local | 11 páginas e 26 assets responderam HTTP 200; duas rotas responderam HTTP 404 nos cenários testados | Navegação visual e interações pelo navegador pendentes |
 | Verificação de padrões de credenciais | Fonte e build examinados, sem ocorrência dos padrões de chave procurados; `.env.local` ignorado pelo Git | Varredura limitada aos padrões e arquivos examinados |
 | Mobile, teclado e fluxo de cliques | A ferramenta de navegador retornou `Local browser use is disabled in Work settings` | Revisão visual e interação de ponta a ponta ainda sem confirmação |
-| Publicação | Acesso privado configurado no Sites | Conferir a confirmação de deploy no relatório da entrega |
+| Publicação | Deploy privado no Sites confirmado em 08/11/2026 | Acesso público ao site ainda não habilitado |
 | Tutor | Desativado; nenhuma chamada de inferência executada | Integração real depende de uso autorizado e avaliação |
 
 A configuração do Work impediu o acesso ao navegador durante a revisão. As respostas HTTP comprovaram o atendimento das páginas e assets testados. A conferência do layout a 360 px, do foco de teclado e do percurso de cliques precisa de uma sessão de navegador disponível.
@@ -114,7 +118,9 @@ Tentativas e histórico começam privados, sem conclusões previamente preenchid
 
 ## Publicação e continuidade
 
-A primeira publicação está preparada como **prévia privada no Sites**. O registro do Site foi concluído; o deploy ainda aguarda confirmação. O código está na pasta local do projeto e o repositório externo no GitHub ainda precisa ser criado. O workflow de verificações está preparado para sua futura publicação.
+O código desta primeira entrega está disponível neste **repositório público**. A [prévia hospedada no Sites](https://arthur-ai-builder-journey.awarehaven21.chatgpt.site) foi publicada em 08/11/2026 e tem acesso restrito à conta do proprietário. Para experimentar a aplicação, siga as instruções de execução local acima. Tornar o código público não altera a permissão de acesso da prévia hospedada.
+
+O workflow [Verificações](https://github.com/arthurarga-tech/arthur-ai-builder-journey/actions/workflows/checks.yml) executa os testes, a tipagem e o build em cada push ou pull request. O deploy permanece separado da integração contínua.
 
 Esta entrega é a base funcional do projeto. O MVP completo depende de um tutor real verificado e de condições de uso autorizadas. Veja o [roteiro de evolução](docs/ROADMAP.md), [como explicar a aplicação](docs/learning/como-explicar.md) e o [registro transparente de uso de IA](docs/AI-USAGE.md).
 

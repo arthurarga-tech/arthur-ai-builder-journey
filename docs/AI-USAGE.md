@@ -1,6 +1,6 @@
 # Como a IA foi usada neste projeto
 
-Registro atualizado em 08/11/2026.
+Registro atualizado em 13/11/2026.
 
 ## Participação de Arthur
 
@@ -24,7 +24,7 @@ O histórico de commits deve registrar essas entregas reais. Não foram simulada
 
 ## Como os resultados devem ser validados
 
-Em 08/11/2026, 24 testes unitários, a verificação de tipos e o build passaram. A migration `drizzle/0000_practice_attempts.sql` foi aplicada ao banco local. O teste de integração do Worker com duas identidades ainda aguarda seu resultado.
+Em 08/11/2026, 24 testes unitários, a verificação de tipos e o build passaram. A migration `drizzle/0000_practice_attempts.sql` foi aplicada ao banco local. O teste de integração do Worker passou com duas identidades sintéticas: acesso privado, isolamento entre contas, reenvios simultâneos idempotentes e exclusão restrita ao titular. Também foram exercitados bloqueios de origem e tentativas de enviar identidade ou pontuação pelo cliente.
 
 As verificações HTTP locais obtiveram 200 em 11 páginas e 26 assets, além de 404 em duas rotas dos cenários testados. Foram examinados 150 arquivos de fonte e 120 do build, sem ocorrência dos padrões de chave de API procurados. O arquivo de ambiente local está ignorado pelo Git.
 
