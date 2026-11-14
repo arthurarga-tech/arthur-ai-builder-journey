@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 import { ArrowDown, ArrowUpRight, Download, MapPin, Mail, FileText } from "lucide-react";
 import { profile } from "@/content/profile";
 import { projects } from "@/content/projects";
@@ -31,13 +31,13 @@ export default function Home() {
     </section>
 
     <section className="section container" id="projetos" aria-labelledby="projetos-titulo">
-      <div className="section-heading"><div><Eyebrow>O que já construí</Eyebrow><h2 id="projetos-titulo">Projetos em destaque.</h2></div><Link className="text-link" href="/projetos">Todos os projetos <ArrowUpRight size={18} /></Link></div>
+      <div className="section-heading"><div><Eyebrow>O que já construí</Eyebrow><h2 id="projetos-titulo">Projetos em destaque.</h2></div><a className="text-link" href="/projetos">Todos os projetos <ArrowUpRight size={18} /></a></div>
       <article className="featured-case">
-        <div><span className="project-kicker">01 / DELIVERY E INTEGRAÇÃO</span><h3>TáVindo Delivery<br /><span>+ TáVindoPrinter</span></h3><p>{projects[0].solution}</p><div className="tags light">{projects[0].tags.map(tag => <span key={tag}>{tag}</span>)}</div><Link className="button white" href="/projetos/tavindo">Conhecer o projeto <ArrowUpRight size={17} /></Link></div>
+        <div><span className="project-kicker">01 / DELIVERY E INTEGRAÇÃO</span><h3>TáVindo Delivery<br /><span>+ TáVindoPrinter</span></h3><p>{projects[0].solution}</p><div className="tags light">{projects[0].tags.map(tag => <span key={tag}>{tag}</span>)}</div><a className="button white" href="/projetos/tavindo">Conhecer o projeto <ArrowUpRight size={17} /></a></div>
         <div className="product-outline"><p className="outline-label">O que compõe o produto</p><dl><div><dt>Marketplace</dt><dd>Catálogo e jornada de compra.</dd></div><div><dt>Gestão</dt><dd>Pedidos, produtos, clientes e assinaturas.</dd></div><div><dt>Impressão</dt><dd>Fila, controle de duplicidade e confirmação por API.</dd></div></dl><p className="outline-foot">Um projeto que conecta minha vivência no delivery ao desenvolvimento de software.</p></div>
       </article>
       <div className="project-grid">{projects.slice(1, 3).map((p, i) => <ProjectCard key={p.slug} project={p} index={i + 1} />)}</div>
-      <div className="more-projects"><h3>Outros projetos</h3>{projects.slice(3).map(p => <Link className="project-row" href={`/projetos/${p.slug}`} key={p.slug}><div><strong>{p.title}</strong><span>{p.subtitle}</span></div><ArrowUpRight size={20} aria-hidden="true" /></Link>)}</div>
+      <div className="more-projects"><h3>Outros projetos</h3>{projects.slice(3).map(p => <a className="project-row" href={`/projetos/${p.slug}`} key={p.slug}><div><strong>{p.title}</strong><span>{p.subtitle}</span></div><ArrowUpRight size={20} aria-hidden="true" /></a>)}</div>
       <p className="small-note">Alguns repositórios são privados. Os resumos apresentam o problema, minha participação e o que desenvolvi, preservando código e dados dos negócios.</p>
     </section>
 
