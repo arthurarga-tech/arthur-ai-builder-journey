@@ -30,7 +30,7 @@ export const profile = {
     },
     {
       title: "Negócios e processos",
-      context: "Vivência com atendimento, precificação, estoque, finanças e operação de delivery na gestão da Dom Burguer.",
+      context: "Vivência com atendimento, precificação, estoque, finanças e operação de delivery na gestão do Dom Burguer.",
     },
     {
       title: "Engenharia e planejamento",

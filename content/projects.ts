@@ -149,4 +149,24 @@ export const projects: Project[] = [
     limits: "Projeto educacional. O repositório apresenta a implementação; a execução depende do ambiente de treinamento.",
     links: [{ label: "Ver código no GitHub", url: "https://github.com/arthurarga-tech/urban-routes-automation-test-sprint8" }],
   },
+  {
+    slug: "assistente-reembolsos",
+    title: "Assistente de apoio a reembolsos",
+    subtitle: "Estudo independente inspirado no Desafio de GenAI do iFood.",
+    category: "Protótipo educacional",
+    tags: ["JavaScript", "HTML", "Busca textual", "Regras de decisão"],
+    problem: "Orientar cenários de reembolso e cancelamento sem inventar políticas ou concluir decisões com informações incompletas.",
+    solution: "Protótipo local que consulta uma base simulada de 20 registros, aplica regras explícitas e apresenta fontes e orientações de revisão humana. Não executa operações financeiras.",
+    contribution: "Realizei a atividade em 14/11/2026, por iniciativa própria, após conhecer o desafio em um vídeo da Networkme. Preparei um protótipo demonstrável e um mini-case com arquitetura proposta, critérios de decisão e cenários de validação para aprofundar minha preparação.",
+    decisions: ["Separar busca textual de aplicação de regras: os campos de status, motivo e confirmação determinam a orientação.", "Exigir confirmação simulada dos dados e encaminhar situações incertas ou suspeitas de fraude.", "Distinguir a implementação local da evolução proposta com RAG e APIs autorizadas."],
+    evidence: ["Demonstração em HTML e JavaScript com base simulada.", "Mini-case técnico e certificado de conclusão da atividade em 14/11/2026."],
+    learnings: ["Explicar a origem de uma orientação e reconhecer quando faltam informações.", "Distinguir busca lexical, regras determinísticas e geração por modelos de IA."],
+    limits: "Estudo educacional independente; não é etapa confirmada da candidatura atual nem produto oficial do iFood. A base não representa políticas oficiais. Não implementa LLM, embeddings, RAG semântico, n8n ou APIs reais. O texto da pergunta recupera trechos, mas não determina a regra aplicada.",
+    links: [
+      { label: "Abrir demonstração educacional", url: "/estudos/reembolsos/index.html" },
+      { label: "Ler mini-case técnico", url: "/estudos/reembolsos/mini-case.pdf" },
+      { label: "Ver certificado de participação", url: "/estudos/reembolsos/certificado.pdf" },
+      { label: "Vídeo de origem — Networkme", url: "https://www.youtube.com/watch?v=e8W6osZ8vTc" }
+    ]
+  },
 ];

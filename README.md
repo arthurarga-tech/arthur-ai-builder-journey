@@ -84,3 +84,6 @@ Arthur definiu o objetivo, forneceu os fatos profissionais e orientou a apresent
 Veja [como a IA foi utilizada](docs/AI-USAGE.md) e os [próximos refinamentos](docs/ROADMAP.md).
 
 Projeto pessoal e independente de Arthur Alves, sem vínculo oficial com as empresas citadas como oportunidades profissionais.
+## Estudo complementar
+
+[Assistente de apoio a reembolsos](https://arthur-ai-builder-journey.awarehaven21.chatgpt.site/projetos/assistente-reembolsos): atividade independente concluída em 14/11/2026, inspirada no Desafio de GenAI do iFood divulgado pela Networkme. Demonstração local, base simulada, mini-case e certificado em public/estudos/reembolsos. Implementa busca textual e regras determinísticas; não usa LLM ou APIs reais e não representa etapa da candidatura atual.
