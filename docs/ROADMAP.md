@@ -1,37 +1,37 @@
-# Roteiro de evolução
+# Próximos refinamentos do portfólio
 
-O projeto avança por entregas verificáveis. Uma função planejada não deve aparecer como disponível antes de funcionar; uma etapa concluída precisa de evidência.
+Escopo atualizado em 13/11/2026: apresentar Arthur, seu currículo e seus projetos a recrutadores. Este roteiro substitui o plano de academia, laboratório, tutor e acompanhamento de estudos da primeira versão.
 
-Estado revisado em 08/11/2026. Os resultados da integração entre contas e do deploy serão incorporados quando confirmados.
+## Entrega atual
 
-| Etapa | Escopo | Critério de conclusão | Estado |
-| --- | --- | --- | --- |
-| Base e apresentação | Home, quatro casos reais, navegação e documentação | Fatos revisados, build/tipagem aprovados e uso mobile/teclado verificado | Implementada; tipagem e build passaram; HTTP 200 em 11 páginas e 26 assets; revisão visual bloqueada pela configuração de navegador do Work |
-| Aprendizado funcional | Quatro lições, exercício, feedback e progresso privado | Regras reproduzíveis, entradas inválidas tratadas, persistência idempotente e isolamento entre contas demonstrado | 24 testes unitários passaram; migration aplicada ao banco local; integração do Worker com duas identidades em andamento |
-| Prévia privada | Versão hospedada no Sites | Deploy confirmado com URL e acesso privado preservado | Site registrado; deploy a confirmar |
-| Tutor real | Explicações contextuais por API no backend | Uso autorizado, limites, erros tratados e chamada real verificada | Desativado; sem consumo autorizado |
-| MVP completo | Jornada apresentação → caso → lição → exercício → tutor | Fluxo completo validado e documentação reproduzível | Depende do tutor real |
-| Mais aprendizado | Trilhas progressivas, metas e reflexão | Cada trilha com teoria, prática e avaliação próprias; dificuldade ajustada por regras explicáveis | Planejado |
-| Evolução pública voluntária | Escolha de evidências para compartilhar | Prévia, publicação explícita e revogação; histórico privado preservado | Planejado |
-| Laboratório avançado | Prompts, desafios, agente com ferramentas e RAG | Implementações reais, avaliações específicas, fontes e controle de acesso | Planejado |
+- Resumo profissional alinhado ao currículo fornecido por Arthur.
+- Projetos descritos como estudos de caso curtos, com problema, solução, participação e entregas.
+- Currículo, formação, experiência e contatos profissionais acessíveis sem login.
+- Remoção das páginas de academia, laboratório e progresso e de suas APIs.
+- Preservação do endereço público e do repositório para manter os links existentes.
 
-O repositório externo no GitHub ainda precisa ser criado. O código, a documentação e o workflow de verificações estão preparados localmente.
+A integração, a verificação visual, os checks técnicos e a confirmação de publicação desta revisão serão registrados após sua conclusão. A aprovação de checks antigos não substitui essa verificação.
 
-## Próximos conteúdos
+## Evidências que podem melhorar os casos
 
-Após lógica, a sequência proposta é Python e JavaScript/TypeScript; APIs/HTTP/JSON; Git e engenharia de software; fundamentos de IA/LLMs; prompts; agentes e automações; RAG/embeddings; aplicações com IA; segurança e avaliação; desafios; entrevistas.
+| Projeto | Próxima evidência útil |
+| --- | --- |
+| TáVindo + Printer | Prints com dados fictícios e sequência curta do pedido até a impressão |
+| GOS — LR Automação | Fluxo de ordem de serviço, apontamento de horas e fechamento, sem informações da empresa |
+| NutriOS | Telas do profissional e do paciente com dados fictícios |
+| Gestão financeira para casais | Telas que mostrem a organização das finanças compartilhadas |
+| Gestão odontológica | Fluxo de agendamento e atendimento com cadastro e odontograma fictícios |
+| Radier Builder | Exemplo de entradas e resultado acompanhado das hipóteses e limites do protótipo |
+| Urban Routes | Registro datado de execução no ambiente de treinamento, com resultado e limitações |
 
-O catálogo é um roteiro, não uma promessa de cursos já publicados. O conteúdo deve considerar os erros e as dúvidas observados no uso, com adaptações que o estudante consiga entender.
+Esses materiais ainda são evidências a produzir ou fornecer. Não há screenshots inventados, promessa de resultados quantitativos ou demonstração de produção presumida.
 
-## Próximas evidências de portfólio
+## Critérios de manutenção
 
-- TáVindo + Printer: demonstração com dados fictícios, explicando pedido, fila, impressão e confirmação.
-- GOS — LR Automação: exemplo sintético de ordem de serviço, horas e fechamento.
-- Radier Builder: hipótese válida e entrada fora do limite do modelo, mantendo explícito o caráter experimental.
-- Urban Routes: execução datada da suíte no ambiente de treinamento, com resultado e limitações.
+1. Priorizar informações que ajudem um recrutador a entender rapidamente a contribuição de Arthur.
+2. Atualizar o currículo e os casos juntos quando houver mudança de experiência ou escopo.
+3. Incluir tecnologias e resultados apenas quando confirmados.
+4. Revisar imagens antes de publicá-las para retirar dados de clientes, colaboradores e pacientes.
+5. Manter o contato e os links de demonstração utilizáveis em celular e desktop.
 
-Esses itens ainda são evidências a produzir. Não representam resultados de execução já obtidos.
-
-## Preparação GenAI
-
-A área de preparação pessoal permanece uma expansão. Informações do programa devem ter fonte e data de consulta. Simulados serão exercícios autorais de preparação; não serão apresentados como etapas oficiais, critérios internos ou previsão das avaliações do iFood. Nenhuma candidatura é enviada pelo site.
+Não estão no escopo atual: cursos, tutor, laboratório de IA, área de candidatura, automações de inscrição ou painel de aprendizado. A preparação pessoal de Arthur é independente deste portfólio.

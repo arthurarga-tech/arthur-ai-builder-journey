@@ -1,79 +1,69 @@
-# Arthur | AI Builder Journey
+# Arthur Alves | Portfólio
 
-Um portfólio e um espaço de prática para conectar engenharia, negócios e desenvolvimento de software. O projeto apresenta a trajetória de Arthur Guedes, seus produtos e uma primeira trilha de aprendizado aplicada a pedidos de delivery.
+Um resumo profissional para conhecer minha trajetória e os projetos que construí. O site reúne currículo, experiências e estudos de caso em uma leitura direta, inclusive para quem não tem acesso aos repositórios privados.
 
-**Primeira entrega implementada, com 24 testes unitários, tipagem e build aprovados em 08/11/2026.** A integração entre contas foi validada. O site está público desde 13/11/2026; o histórico de aprendizado continua privado por usuário. O tutor de IA está desativado e o uso da API permanece sem autorização de consumo. Projeto pessoal e independente, sem vínculo oficial com o iFood.
+[Visitar o portfólio](https://arthur-ai-builder-journey.awarehaven21.chatgpt.site) · [Currículo em PDF](public/curriculo/Arthur_Alves_Curriculo.pdf) · [LinkedIn](https://www.linkedin.com/in/arthur-guedes96/) · [GitHub](https://github.com/arthurarga-tech)
 
-[Código-fonte no GitHub](https://github.com/arthurarga-tech/arthur-ai-builder-journey) · [Demonstração pública](https://arthur-ai-builder-journey.awarehaven21.chatgpt.site)
+## Sobre mim
 
-## O que esta entrega reúne
+Sou Arthur Augusto Reis Guedes Alves, engenheiro civil, técnico em Mecatrônica e estudante de Análise e Desenvolvimento de Sistemas. Minha trajetória reúne projetos de engenharia, gestão de um negócio de alimentação, desenvolvimento de aplicações com assistência de IA e formação prática em QA.
 
-- Apresentação profissional, formação e links de GitHub e LinkedIn.
-- Quatro estudos de caso: TáVindo Delivery + Printer, GOS — LR Automação, Radier Builder e Urban Routes.
-- Trilha de lógica com quatro lições: entradas, condições, repetição/funções e casos de teste.
-- Exercício com correção no servidor, quatro critérios de 25 pontos e feedback por critério.
-- Prática anônima e progresso privado para quem entra com sua conta.
-- Base preparada para ampliar a academia e implementar IA em uma etapa posterior.
+Busco oportunidades em tecnologia e desenvolvimento de sistemas, contribuindo para necessidades de negócio e aprofundando minha base técnica.
 
-O material dos produtos privados é apresentado por descrição. Código de clientes, dados operacionais e métricas comerciais não verificadas ficam fora do repositório. O Urban Routes é identificado como prática educacional; o Radier Builder, como protótipo experimental com limites de uso.
+## Projetos apresentados
 
-## Experimente o fluxo
-
-1. Leia a apresentação e abra um estudo de caso.
-2. Entre na Academia e percorra as quatro lições de lógica.
-3. Resolva o exercício da loja fictícia e confira o feedback.
-4. Revise a regra que causou o erro e tente novamente.
-5. Entre com sua conta para registrar a tentativa e consultar seu próprio progresso.
-
-O exemplo usa dois hambúrgueres a R$ 18,90, uma batata a R$ 7,90 e entrega de R$ 5,00: **5070 centavos, ou R$ 50,70**. A simulação não cria pedidos reais. Uma conclusão do exercício registra essa prática; não equivale a certificação ou domínio profissional.
-
-## Tecnologias e arquitetura
-
-| Parte | Escolha |
+| Projeto | O que apresenta |
 | --- | --- |
-| Interface | React 19, TypeScript 5.9 e componentes reutilizáveis |
-| Aplicação | Vinext 1.0.0-beta.5, padrão App Router e Vite 8 |
-| Backend | Rotas de servidor em Cloudflare Workers pelo Sites |
-| Persistência | D1/SQLite, esquema Drizzle e migrations versionadas |
-| Identidade | Autenticação do Sites e autorização por usuário no servidor |
-| Avaliação | Regras determinísticas; o modelo de IA não atribui notas |
-| Verificação | Testes automatizados, tipagem e build; CI sem deploy automático |
+| TáVindo Delivery + TáVindoPrinter | Marketplace, gestão de pedidos e integração com impressão térmica por fila e confirmação de tarefas |
+| GOS — LR Automação | Ordens de serviço, apontamento de horas e fechamento operacional e financeiro |
+| NutriOS | Plataforma web para nutricionistas, com pacientes, avaliações, planos alimentares e acompanhamento pelo paciente |
+| Gestão financeira para casais | Plataforma de organização de finanças compartilhadas |
+| Gestão de clínicas odontológicas | Pacientes, consultas, agendamentos, odontograma e gestão financeira |
+| Radier Builder | Protótipo de pré-dimensionamento simplificado, com hipóteses e limites; não constitui projeto estrutural completo |
+| Urban Routes | Projeto educacional de testes com Python, Selenium, Pytest e Page Object |
 
-Interface, conteúdo, API e regras vivem no mesmo projeto. O conteúdo público está separado das tentativas privadas. O servidor obtém a identidade autenticada e limita consultas e gravações ao titular; um identificador enviado pelo navegador não concede acesso a outro histórico.
+Os casos descrevem o problema, a solução, minha participação e o escopo desenvolvido. A referência de conteúdo é o currículo fornecido por Arthur e os fatos já confirmados dos projetos. Prints reais poderão complementar a apresentação. Código privado e dados de clientes não são publicados; tecnologias, métricas ou resultados não são presumidos.
 
-**Limite do runtime:** Vinext está em beta. O projeto usa o starter mantido pelo Sites e preserva suas integrações de build, autenticação e armazenamento. A presença de APIs compatíveis com Next.js não implica compatibilidade integral nem migração automática para outra hospedagem. A decisão está registrada no [ADR inicial](docs/adr/0001-primeira-entrega.md).
+## Experiência do visitante
+
+O portfólio é público e não exige conta. A apresentação leva aos projetos, à formação, ao currículo e aos contatos profissionais. A revisão de 13/11/2026 retira academia, laboratório de IA, exercícios e painel de progresso do site. Os endereços antigos dessas funcionalidades deixam de ser servidos.
 
 ## Executar localmente
 
-Use **Node.js 24 recomendado** e npm. O starter exige Node 22.13 ou superior; para executar os testes TypeScript diretamente com Node, use no mínimo 22.18.
+Use Node.js 24 e npm.
 
 ```sh
 git clone https://github.com/arthurarga-tech/arthur-ai-builder-journey.git
 cd arthur-ai-builder-journey
 npm ci
 npm run build
-```
-
-O build gera `dist/server/wrangler.json`, necessário para preparar o banco local. Em um banco novo, aplique a migration inicial antes de iniciar a prática com histórico:
-
-```sh
-node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0000_practice_attempts.sql
 npm run dev
 ```
 
-Use a URL local informada pelo terminal. Não reaplique migrations já executadas e não edite migrations publicadas. Após uma alteração de esquema, use `npm run db:generate`, revise o SQL gerado e faça um novo build se os bindings mudarem. O banco local é separado do banco hospedado; o Sites aplica as migrations de produção durante a publicação.
+Abra a URL local informada pelo terminal. Mantenha o servidor em `127.0.0.1`. As páginas atuais não consultam o banco, não precisam de migration manual nem de chave de IA. Para executar o Worker compilado localmente, use `npm start`.
 
-No perfil portátil, o starter simula login **somente em requisições de desenvolvimento em loopback**. O botão de entrar usa esse fluxo local. O mock não faz parte do build de produção; no site hospedado, a identidade é fornecida pela plataforma. Mantenha o servidor de desenvolvimento em `127.0.0.1`.
+## Arquitetura
 
-Para testar o Worker já compilado, execute `npm start`. Esse modo compartilha o banco local, mas não simula login nem publica o site.
+- React 19 e TypeScript para páginas e componentes.
+- Vinext 1.0.0-beta.5 e Vite 8, preservando o starter e o processo de publicação do Sites.
+- Conteúdo versionado em `content/`, sem CMS ou acesso aos sistemas dos projetos apresentados.
+- Cloudflare Worker como ambiente de hospedagem do Sites.
 
-### Configuração de IA
+Vinext está em beta; esta implementação não presume compatibilidade integral com Next.js ou migração automática para outra hospedagem. Os nomes atuais do repositório e do endereço publicado foram preservados para manter os links existentes.
 
-Nenhuma chave é necessária para estudar, resolver o exercício ou executar os testes desta entrega. A integração de IA permanece desativada. A existência de `OPENAI_API_KEY` em um arquivo local não autoriza chamadas nem transforma o tutor em uma função operacional.
+```text
+app/                  apresentação e páginas dos projetos
+components/           navegação e componentes visuais
+content/              perfil e estudos de caso
+public/curriculo/     currículo disponibilizado aos recrutadores
+docs/                 decisões e registro de uso de IA
+.github/workflows/    testes, tipagem e build
+.openai/hosting.json   identidade e configuração da hospedagem
+```
 
-Quando houver autorização de uso, a próxima etapa deverá configurar limites, implementar o adaptador exclusivamente no servidor e validar uma chamada real. Segredos locais ficam em arquivos de ambiente ignorados pelo Git; segredos hospedados devem ser configurados pelo mecanismo da plataforma. Nunca colocar valores no código, no README, no manifesto ou em variáveis expostas ao navegador.
+Os módulos `domain/`, `services/`, `db/`, `drizzle/` e seus testes pertencem à versão anterior e não estão ligados a rotas públicas nesta revisão. Foram preservados para manter o histórico técnico e evitar apagar dados existentes. A decisão e seus limites estão no [ADR 0002](docs/adr/0002-portfolio-recrutadores.md). O comando `test:integration` é histórico e depende das antigas APIs; não valida o portfólio atual.
 
-## Verificar
+## Verificação
 
 ```sh
 npm test
@@ -81,51 +71,16 @@ npm run typecheck
 npm run build
 ```
 
-Os testes devem cobrir cálculo em centavos, entradas inválidas, critérios de avaliação, reenvios e autorização das operações privadas. O workflow em `.github/workflows/checks.yml` executa instalação, testes, tipagem e build em pushes e pull requests. Ele não publica o site nem chama a API de IA.
+O [GitHub Actions](https://github.com/arthurarga-tech/arthur-ai-builder-journey/actions/workflows/checks.yml) executa esses checks em cada push e pull request. A publicação do site é separada.
 
-### Registro de verificação — 08/11/2026
+Os 24 testes unitários existentes verificam regras e validações da versão anterior; sua aprovação não comprova a nova interface. Para esta revisão, é necessário também conferir páginas e links públicos, o PDF, a remoção das rotas antigas e a navegação em desktop e mobile.
 
-| Verificação | Resultado comprovado | Pendência |
-| --- | --- | --- |
-| Testes unitários | 24 testes passaram | Concluído nesta rodada |
-| TypeScript | `npm run typecheck` passou | Concluído nesta rodada |
-| Build | `npm run build` passou | Concluído nesta rodada |
-| Banco local | `drizzle/0000_practice_attempts.sql` aplicada | Integração aprovada com duas contas sintéticas, reenvios simultâneos e exclusão isolada |
-| HTTP local | 11 páginas e 26 assets responderam HTTP 200; duas rotas responderam HTTP 404 nos cenários testados | Navegação visual e interações pelo navegador pendentes |
-| Verificação de padrões de credenciais | Fonte e build examinados, sem ocorrência dos padrões de chave procurados; `.env.local` ignorado pelo Git | Varredura limitada aos padrões e arquivos examinados |
-| Mobile, teclado e fluxo de cliques | A ferramenta de navegador retornou `Local browser use is disabled in Work settings` | Revisão visual e interação de ponta a ponta ainda sem confirmação |
-| Publicação | Deploy confirmado em 08/11/2026; acesso público habilitado em 13/11/2026 | Histórico pessoal continua protegido por autenticação |
-| Tutor | Desativado; nenhuma chamada de inferência executada | Integração real depende de uso autorizado e avaliação |
+**Verificação da revisão de 13/11/2026:** pendente de consolidação após a integração das alterações, o build e a publicação. Resultados da versão anterior não são apresentados como testes desta revisão.
 
-A configuração do Work impediu o acesso ao navegador durante a revisão. As respostas HTTP comprovaram o atendimento das páginas e assets testados. A conferência do layout a 360 px, do foco de teclado e do percurso de cliques precisa de uma sessão de navegador disponível.
+## Desenvolvimento com assistência de IA
 
-Em 13/11/2026, o GitHub Actions também concluiu instalação, testes, tipagem e build em Ubuntu. Após liberar o site, requisições sem login receberam HTTP 200 na apresentação, no portfólio e na academia. A área de evolução apresentou a opção de entrar e a API de progresso recusou acesso anônimo com HTTP 401.
+Arthur definiu o objetivo, forneceu os fatos profissionais e orientou a apresentação. O Codex auxiliou na implementação, na redação e na verificação. O site não oferece funções de IA e não faz chamadas de inferência. A descrição dos projetos não atribui automaticamente domínio de todas as tecnologias a Arthur.
 
-## Estrutura
+Veja [como a IA foi utilizada](docs/AI-USAGE.md) e os [próximos refinamentos](docs/ROADMAP.md).
 
-```text
-app/                  páginas, autenticação e endpoints
-components/           interface reutilizável
-content/              perfil, projetos e lições públicos
-domain/               regras do exercício e avaliação
-db/                   acesso ao banco e esquema
-drizzle/              migrations e metadados gerados
-tests/                verificações automatizadas
-docs/                 decisões, explicações e roteiro
-.github/workflows/    verificações de integração contínua
-.openai/hosting.json   configuração da hospedagem
-```
-
-Tentativas e histórico começam privados, sem conclusões previamente preenchidas. Reenviar uma mesma tentativa não deve multiplicar seus registros. A página pública do portfólio não fornece acesso ao histórico pessoal de Arthur nem de outros participantes.
-
-## Publicação e continuidade
-
-O código desta primeira entrega está disponível neste **repositório público**. A [demonstração hospedada no Sites](https://arthur-ai-builder-journey.awarehaven21.chatgpt.site) pode ser acessada por recrutadores e demais visitantes sem login desde 13/11/2026. Apresentação, estudos de caso, lições e prática estão abertos. Entrar com uma conta é necessário somente para salvar tentativas e consultar o próprio histórico; o progresso pessoal de Arthur não é público.
-
-O workflow [Verificações](https://github.com/arthurarga-tech/arthur-ai-builder-journey/actions/workflows/checks.yml) executa os testes, a tipagem e o build em cada push ou pull request. O deploy permanece separado da integração contínua.
-
-Esta entrega é a base funcional do projeto. O MVP completo depende de um tutor real verificado e de condições de uso autorizadas. Veja o [roteiro de evolução](docs/ROADMAP.md), [como explicar a aplicação](docs/learning/como-explicar.md) e o [registro transparente de uso de IA](docs/AI-USAGE.md).
-
-**Arthur Guedes** · [GitHub](https://github.com/arthurarga-tech) · [LinkedIn](https://www.linkedin.com/in/arthur-guedes96/)
-
-Projeto pessoal e independente, sem vínculo oficial com o iFood.
+Projeto pessoal e independente de Arthur Alves, sem vínculo oficial com as empresas citadas como oportunidades profissionais.

@@ -4,42 +4,32 @@ Registro atualizado em 13/11/2026.
 
 ## Participação de Arthur
 
-Arthur definiu o propósito do produto, sua trajetória, os projetos a apresentar, a direção visual e a prioridade de uma primeira entrega pequena. Confirmou os dados profissionais usados no conteúdo e determinou que nenhuma competência, experiência ou métrica comercial fosse inventada.
+Arthur definiu o propósito, a trajetória a apresentar e os projetos do portfólio. Forneceu seu currículo e orientou a revisão para uma apresentação enxuta destinada a recrutadores, retirando a academia, o laboratório de IA e os fluxos de estudo.
 
-Arthur também definiu o limite de custo: configurar uma credencial não autoriza consumo da API de IA. O tutor deve permanecer desativado até haver condições de uso autorizadas e validação real.
+As informações profissionais e os projetos partem de fatos fornecidos ou confirmados por Arthur. Não são inventados resultados comerciais, métricas, certificações ou domínio de tecnologias.
 
 ## Participação do Codex
 
-O Codex foi utilizado para organizar a arquitetura, redigir conteúdo a partir de fatos confirmados, implementar interface e regras, preparar testes e produzir documentação. O desenvolvimento partiu do starter fornecido pelo Sites, preservando as integrações da plataforma.
+O Codex auxiliou na arquitetura, no conteúdo, na implementação da interface, nos testes e na documentação. O desenvolvimento usa o starter do Sites, preservando suas integrações de hospedagem e build. A revisão inclui organização dos casos, alinhamento ao currículo e retirada das rotas fora do novo escopo.
 
-As contribuições assistidas incluem:
+O histórico registra essas alterações reais. Não foram simuladas datas anteriores, horas de trabalho ou autoria manual de Arthur para código produzido com assistência.
 
-- Estrutura de páginas e componentes da primeira entrega.
-- Conteúdo público separado de registros privados de preparação.
-- Implementação e testes do exercício determinístico.
-- Rotas de servidor, persistência e tratamento de estados de erro.
-- Documentação das decisões, limitações e passos de execução.
+## Verificação e limites
 
-O histórico de commits deve registrar essas entregas reais. Não foram simuladas datas anteriores, horas de trabalho ou autoria manual de Arthur para código produzido com assistência.
+Os checks anteriores de testes, tipos, build e integração pertencem à versão que incluía uma experiência de aprendizado. As regras e os 24 testes dessa versão foram preservados no código, mas não estão expostos como funcionalidades do portfólio. Sua aprovação não comprova o layout ou a navegação da nova apresentação.
 
-## Como os resultados devem ser validados
+A verificação desta revisão está pendente de consolidação após a integração: leitura do conteúdo, navegação, PDF, links, comportamento responsivo, tipagem, build e confirmação de publicação. Nenhuma revisão integral de Arthur é presumida; sua participação inclui conferir os fatos e conseguir explicar as decisões e os limites dos projetos apresentados.
 
-Em 08/11/2026, 24 testes unitários, a verificação de tipos e o build passaram. A migration `drizzle/0000_practice_attempts.sql` foi aplicada ao banco local. O teste de integração do Worker passou com duas identidades sintéticas: acesso privado, isolamento entre contas, reenvios simultâneos idempotentes e exclusão restrita ao titular. Também foram exercitados bloqueios de origem e tentativas de enviar identidade ou pontuação pelo cliente.
+## IA no processo de desenvolvimento
 
-As verificações HTTP locais obtiveram 200 em 11 páginas e 26 assets, além de 404 em duas rotas dos cenários testados. Foram examinados 150 arquivos de fonte e 120 do build, sem ocorrência dos padrões de chave de API procurados. O arquivo de ambiente local está ignorado pelo Git.
+O portfólio foi construído com assistência de IA. O site publicado não oferece tutor, geração de respostas ou outro serviço de inferência, e não realiza chamadas a APIs de IA. Configurar uma chave local não autoriza consumo. Não há gastos de IA autorizados para esta aplicação.
 
-A configuração do Work bloqueou a ferramenta de navegador com a mensagem `Local browser use is disabled in Work settings`. A revisão visual, o comportamento mobile e o fluxo completo de cliques ainda precisam ser conferidos em navegador.
+O TáVindoPrinter é descrito como integração operacional de impressão, com fila e confirmação de tarefas. Esse funcionamento não é apresentado como orquestração de agentes de IA.
 
-A revisão de Arthur inclui executar a aplicação, estudar as regras, conferir os fatos publicados e conseguir explicar decisões e limitações. Essa revisão humana permanece uma atividade a realizar e registrar.
+## Dados e fontes
 
-## IA no desenvolvimento e IA no produto
+O currículo profissional fornecido por Arthur orienta os dados de formação, experiência e projetos. Os casos permitem explicar os produtos sem publicar seu código privado. O portfólio não acessa os ambientes de produção desses produtos.
 
-São usos diferentes. Esta versão foi construída com assistência de IA, mas **não oferece um tutor operacional**. Não foi feita chamada de inferência da aplicação à OpenAI. O exercício usa regras de programação comuns e não depende de um modelo para decidir a nota.
+Informações de clientes, pacientes, colaboradores, familiares, credenciais e arquivos privados de preparação ficam fora da publicação. O currículo e os contatos profissionais apresentados ao recrutador seguem o escopo pedido por Arthur. Prints futuros devem usar dados fictícios ou passar por revisão antes de publicação.
 
-O TáVindoPrinter apresentado no portfólio é uma integração operacional de impressão. Não há alegação de que sua fila ou confirmação de tarefas sejam um agente de IA.
-
-## Dados preservados
-
-Não fazem parte do conteúdo publicado: arquivos privados de carreira, informações de familiares, dados de clientes, credenciais e código dos produtos privados. Os exercícios usam um catálogo fictício. O novo site não acessa os ambientes de produção dos projetos do portfólio.
-
-Segredos não devem aparecer em prompts publicados, histórico de Git, logs, screenshots ou bundles do navegador. O registro de decisões descreve configurações por nome, sem copiar valores.
+A retirada dos endpoints antigos não apaga registros no banco. O armazenamento da primeira versão foi preservado, sem acesso por páginas ou APIs públicas do portfólio revisado.

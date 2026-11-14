@@ -1,328 +1,56 @@
 import Link from "next/link";
-import {
-  ArrowRight,
-  ArrowUpRight,
-  BookOpen,
-  Braces,
-  Check,
-  Layers3,
-  MapPin,
-  ScanLine,
-  Sparkles,
-  Workflow,
-} from "lucide-react";
+import { ArrowDown, ArrowUpRight, Download, MapPin, Mail, FileText } from "lucide-react";
 import { profile } from "@/content/profile";
 import { projects } from "@/content/projects";
-import { Eyebrow, ProjectCard } from "@/components/shared";
+import { Eyebrow, ProjectCard, resumeUrl } from "@/components/shared";
 
 export default function Home() {
-  return (
-    <>
-      <section className="hero container" aria-labelledby="apresentacao">
-        <div className="hero-copy">
-          <Eyebrow>{profile.displayName}</Eyebrow>
-          <h1 id="apresentacao">
-            Da engenharia
-            <br />
-            <span>ao software.</span>
-          </h1>
-          <p className="hero-intro">
-            Sou engenheiro civil, empreendedor e estudante de Análise e
-            Desenvolvimento de Sistemas. No TáVindo, uso o que aprendi na
-            operação de um delivery para desenvolver o caminho entre a compra e
-            a impressão do pedido.
-          </p>
-          <div className="hero-actions">
-            <Link className="button primary" href="/projetos">
-              Conheça meus projetos <ArrowUpRight size={18} />
-            </Link>
-            <Link className="button quiet" href="/academia">
-              Explore a academia <ArrowRight size={17} />
-            </Link>
-          </div>
-          <div className="hero-note">
-            <MapPin size={15} aria-hidden="true" />
-            {profile.location}
-          </div>
+  return <>
+    <section className="hero container" aria-labelledby="apresentacao">
+      <div className="hero-copy">
+        <Eyebrow>Desenvolvimento · Qualidade · Negócios</Eyebrow>
+        <h1 id="apresentacao">Arthur Alves<span>.</span></h1>
+        <p className="hero-headline">{profile.headline}</p>
+        <p className="hero-intro">{profile.bio}</p>
+        <div className="hero-actions">
+          <a className="button primary" href="#projetos">Ver meus projetos <ArrowDown size={17} /></a>
+          <a className="button secondary" href={resumeUrl} download>Baixar currículo <Download size={17} /></a>
         </div>
-        <div
-          className="builder-visual"
-          aria-label="As áreas e as etapas que reúno nos projetos"
-        >
-          <div className="visual-top">Meu processo de desenvolvimento</div>
-          <div className="visual-orbit">
-            <div className="orbit-line line-one" aria-hidden="true" />
-            <div className="orbit-line line-two" aria-hidden="true" />
-            <div className="orbit-label label-engineer">
-              <Layers3 size={17} aria-hidden="true" /> Engenharia
-            </div>
-            <div className="orbit-label label-business">
-              <Workflow size={17} aria-hidden="true" /> Negócios
-            </div>
-            <div className="orbit-label label-tech">
-              <Braces size={17} aria-hidden="true" /> Software
-            </div>
-            <div className="orbit-core" aria-hidden="true">
-              <span>
-                a<span>.</span>
-              </span>
-            </div>
-          </div>
-          <div className="visual-process">
-            <div>
-              <strong>Entender</strong>
-              <small>o problema</small>
-            </div>
-            <ArrowRight size={16} aria-hidden="true" />
-            <div>
-              <strong>Construir</strong>
-              <small>a solução</small>
-            </div>
-            <ArrowRight size={16} aria-hidden="true" />
-            <div>
-              <strong>Validar</strong>
-              <small>o resultado</small>
-            </div>
-          </div>
-          <Link className="visual-caption" href="/projetos/urban-routes">
-            <ScanLine size={15} aria-hidden="true" /> Veja os testes do projeto
-            Urban Routes <ArrowUpRight size={14} />
-          </Link>
-        </div>
-      </section>
-
-      <div className="principles-strip">
-        <div
-          className="container"
-          role="navigation"
-          aria-label="Seções desta página"
-        >
-          <span>
-            <Braces size={18} aria-hidden="true" />
-            <a href="#projetos">Projetos</a>
-          </span>
-          <span>
-            <Workflow size={18} aria-hidden="true" />
-            <a href="#trajetoria">Trajetória</a>
-          </span>
-          <span>
-            <Layers3 size={18} aria-hidden="true" />
-            <a href="#formacao">Formação e competências</a>
-          </span>
-          <span>
-            <BookOpen size={18} aria-hidden="true" />
-            <a href="#estudos">Estudos</a>
-          </span>
-        </div>
+        <p className="hero-note"><MapPin size={15} />{profile.location}</p>
       </div>
+      <aside className="profile-readme" aria-label="Perfil em resumo">
+        <div className="readme-title"><FileText size={17} /> SOBRE MIM <span>README.md</span></div>
+        <p className="readme-intro">Da operação de um negócio<br />à construção do sistema.</p>
+        <dl className="readme-facts">
+          <div><dt>Hoje</dt><dd>Estudante de ADS e desenvolvedor de projetos autônomos.</dd></div>
+          <div><dt>Minha base</dt><dd>Engenharia Civil, Mecatrônica e formação em QA.</dd></div>
+          <div><dt>Na prática</dt><dd>Delivery, gestão de serviços, saúde, finanças e testes de software.</dd></div>
+        </dl>
+        <div className="readme-footer">Entender o negócio. Construir. Verificar.</div>
+      </aside>
+    </section>
 
-      <section
-        className="section container"
-        id="projetos"
-        aria-labelledby="projetos-titulo"
-      >
-        <div className="section-heading">
-          <h2 id="projetos-titulo">Projetos de software</h2>
-          <Link className="text-link" href="/projetos">
-            Todos os projetos <ArrowUpRight size={19} />
-          </Link>
-        </div>
-        <div className="featured-case">
-          <div className="featured-copy">
-            <h3>
-              TáVindo Delivery
-              <br />
-              <span>+ TáVindoPrinter</span>
-            </h3>
-            <p>
-              O cliente escolhe os itens no marketplace. O estabelecimento
-              acompanha o pedido e o Printer busca a tarefa de impressão na
-              fila. Desenvolvi esse fluxo com apoio de IA e da minha experiência
-              em alimentação.
-            </p>
-            <div className="tags light">
-              <span>React</span>
-              <span>TypeScript</span>
-              <span>Supabase</span>
-            </div>
-            <Link href="/projetos/tavindo" className="button white">
-              Ler o caso TáVindo <ArrowUpRight size={18} />
-            </Link>
-          </div>
-          <div className="delivery-map">
-            <span className="map-caption">Fluxo ilustrativo do produto</span>
-            <div className="delivery-step">
-              <span className="step-icon">
-                <Layers3 size={21} />
-              </span>
-              <div>
-                <strong>Marketplace</strong>
-                <small>Catálogo e escolha dos itens</small>
-              </div>
-              <Check size={17} aria-hidden="true" />
-            </div>
-            <div className="flow-connector" aria-hidden="true" />
-            <div className="delivery-step">
-              <span className="step-icon">
-                <Workflow size={21} />
-              </span>
-              <div>
-                <strong>Estabelecimento</strong>
-                <small>Recebimento e gestão dos pedidos</small>
-              </div>
-              <Check size={17} aria-hidden="true" />
-            </div>
-            <div className="flow-connector" aria-hidden="true" />
-            <div className="delivery-step printer">
-              <span className="step-icon">
-                <ScanLine size={21} />
-              </span>
-              <div>
-                <strong>TáVindoPrinter</strong>
-                <small>Fila, impressão e confirmação</small>
-              </div>
-            </div>
-            <p>
-              O Printer identifica tarefas já processadas para evitar impressões
-              duplicadas.
-            </p>
-          </div>
-        </div>
-        <div className="project-grid secondary-projects">
-          {projects.slice(1, 3).map((project, index) => (
-            <ProjectCard
-              key={project.slug}
-              project={project}
-              index={index + 1}
-            />
-          ))}
-        </div>
-      </section>
+    <section className="section container" id="projetos" aria-labelledby="projetos-titulo">
+      <div className="section-heading"><div><Eyebrow>O que já construí</Eyebrow><h2 id="projetos-titulo">Projetos em destaque.</h2></div><Link className="text-link" href="/projetos">Todos os projetos <ArrowUpRight size={18} /></Link></div>
+      <article className="featured-case">
+        <div><span className="project-kicker">01 / DELIVERY E INTEGRAÇÃO</span><h3>TáVindo Delivery<br /><span>+ TáVindoPrinter</span></h3><p>{projects[0].solution}</p><div className="tags light">{projects[0].tags.map(tag => <span key={tag}>{tag}</span>)}</div><Link className="button white" href="/projetos/tavindo">Conhecer o projeto <ArrowUpRight size={17} /></Link></div>
+        <div className="product-outline"><p className="outline-label">O que compõe o produto</p><dl><div><dt>Marketplace</dt><dd>Catálogo e jornada de compra.</dd></div><div><dt>Gestão</dt><dd>Pedidos, produtos, clientes e assinaturas.</dd></div><div><dt>Impressão</dt><dd>Fila, controle de duplicidade e confirmação por API.</dd></div></dl><p className="outline-foot">Um projeto que conecta minha vivência no delivery ao desenvolvimento de software.</p></div>
+      </article>
+      <div className="project-grid">{projects.slice(1, 3).map((p, i) => <ProjectCard key={p.slug} project={p} index={i + 1} />)}</div>
+      <div className="more-projects"><h3>Outros projetos</h3>{projects.slice(3).map(p => <Link className="project-row" href={`/projetos/${p.slug}`} key={p.slug}><div><strong>{p.title}</strong><span>{p.subtitle}</span></div><ArrowUpRight size={20} aria-hidden="true" /></Link>)}</div>
+      <p className="small-note">Alguns repositórios são privados. Os resumos apresentam o problema, minha participação e o que desenvolvi, preservando código e dados dos negócios.</p>
+    </section>
 
-      <section
-        className="story-section"
-        id="trajetoria"
-        aria-labelledby="trajetoria-titulo"
-      >
-        <div className="container">
-          <div className="story-grid">
-            <div>
-              <h2 id="trajetoria-titulo">Minha trajetória</h2>
-              <p className="lead">
-                Meu nome é {profile.name}. Minha experiência reúne projetos de
-                engenharia, gestão de um negócio de alimentação e
-                desenvolvimento de sistemas.
-              </p>
-            </div>
-            <div className="story-copy">
-              <p>
-                Desde fevereiro de 2024, elaboro projetos arquitetônicos para
-                aprovação municipal, além de projetos elétricos e
-                hidrossanitários. Esse trabalho exige entender o que será
-                construído e conferir os requisitos de cada entrega.
-              </p>
-              <p>{profile.story[1]}</p>
-            </div>
-          </div>
-          <div className="timeline">
-            {profile.timeline.map((item) => (
-              <div key={item.title}>
-                <span className="timeline-marker" aria-hidden="true" />
-                <small>{item.period}</small>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </div>
-            ))}
-          </div>
-          <div className="story-grid" id="formacao">
-            <div>
-              <details>
-                <summary>
-                  <strong>Formação acadêmica e técnica</strong>
-                </summary>
-                <dl>
-                  {profile.education.map((item) => (
-                    <div key={item.title}>
-                      <dt>
-                        <strong>{item.title}</strong>
-                      </dt>
-                      <dd>
-                        {item.institution} · {item.period}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
-              </details>
-            </div>
-            <div>
-              <details>
-                <summary>
-                  <strong>Competências e onde as aplico</strong>
-                </summary>
-                <dl>
-                  {profile.skills.map((skill) => (
-                    <div key={skill.title}>
-                      <dt>
-                        <strong>{skill.title}</strong>
-                      </dt>
-                      <dd>{skill.context}</dd>
-                    </div>
-                  ))}
-                </dl>
-              </details>
-            </div>
-          </div>
-        </div>
-      </section>
+    <section className="about-band" id="sobre" aria-labelledby="sobre-titulo"><div className="container section">
+      <div className="about-grid"><div><Eyebrow>Trajetória</Eyebrow><h2 id="sobre-titulo">Experiência que vira<br />contexto para construir.</h2></div><div className="about-copy"><p>{profile.story[0]}</p><p>{profile.story[2]}</p><p className="objective">{profile.objective}</p></div></div>
+      <div className="experience-list">{profile.experience.map(item => <article className="experience-row" key={item.title}><p className="period">{item.period}</p><div><h3>{item.title}</h3><p className="organization">{item.organization}</p><p>{item.description}</p></div></article>)}</div>
+    </div></section>
 
-      <section
-        className="section container"
-        id="estudos"
-        aria-labelledby="estudos-titulo"
-      >
-        <div className="learning-banner">
-          <div>
-            <h2 id="estudos-titulo">
-              Lógica de programação
-              <br />
-              aplicada a pedidos
-            </h2>
-            <p>
-              Na primeira trilha da academia, você aprende a representar preços
-              em centavos, validar quantidades e testar o total de um pedido
-              fictício.
-            </p>
-            <Link href="/academia" className="button primary">
-              Ver a academia <ArrowRight size={18} />
-            </Link>
-          </div>
-          <Link className="learning-feature" href="/academia/logica">
-            <span className="lesson-symbol">
-              <Braces size={34} aria-hidden="true" />
-            </span>
-            <h3>Do pedido à decisão</h3>
-            <div className="learning-meta">
-              <span>4 lições</span>
-              <span>1 exercício interativo</span>
-            </div>
-            <span className="text-link">
-              Começar a trilha <ArrowUpRight size={18} />
-            </span>
-          </Link>
-        </div>
-      </section>
+    <section className="section container" id="curriculo" aria-labelledby="formacao-titulo">
+      <div className="section-heading"><div><Eyebrow>Currículo em resumo</Eyebrow><h2 id="formacao-titulo">Formação e competências.</h2></div><a className="text-link" href={resumeUrl} target="_blank" rel="noopener noreferrer">Ver currículo em PDF <ArrowUpRight size={18} /></a></div>
+      <div className="resume-grid"><div className="education-list">{profile.education.map(item => <article key={item.title}><p className="education-status">{item.status}</p><h3>{item.title}</h3><p>{item.institution}</p><small>{item.period}</small></article>)}<article><p className="education-status">Vivência internacional</p><h3>Inglês intermediário</h3><p>{profile.internationalExperience.description}</p><small>{profile.internationalExperience.period}</small></article></div><div className="skills-list">{profile.skills.slice(0, 5).map(item => <article key={item.title}><h3>{item.title}</h3><p>{item.context}</p></article>)}<div className="ai-note"><strong>IA como ferramenta de trabalho</strong><p>{profile.aiApproach}</p></div></div></div>
+    </section>
 
-      <section className="container closing-note" aria-labelledby="ia-titulo">
-        <Sparkles size={23} aria-hidden="true" />
-        <div>
-          <h2 id="ia-titulo">Como uso inteligência artificial</h2>
-          <p>{profile.aiApproach}</p>
-          <p>{profile.genAiMotivation}</p>
-        </div>
-        <Link href="/laboratorio" className="text-link">
-          Laboratório de IA <ArrowUpRight size={18} />
-        </Link>
-      </section>
-    </>
-  );
+    <section className="contact-band" id="contato" aria-labelledby="contato-titulo"><div className="container contact-inner"><div><Eyebrow>Próximo passo</Eyebrow><h2 id="contato-titulo">Vamos conversar.</h2><p>Busco oportunidades em tecnologia e desenvolvimento de sistemas. Meu currículo e meus projetos são o ponto de partida.</p></div><div className="contact-links"><a className="button primary" href={`mailto:${profile.email}`}><Mail size={18} /> Entrar em contato</a><a className="contact-email" href={`mailto:${profile.email}`}>{profile.email}</a><div className="social-links">{profile.links.map(link => <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer">{link.label} <ArrowUpRight size={16} /></a>)}</div></div></div></section>
+  </>;
 }
